@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa Loja Bike</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PFGWSJH8');</script>
+<!-- End Google Tag Manager -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #e5ddd5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .whatsapp-frame {
+      width: 100%;
+      max-width: 390px;
+      min-height: 100vh;
+      background: #efeae2;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .header {
+      height: 68px;
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      padding: 10px 14px;
+      gap: 12px;
+    }
+
+    .back {
+      font-size: 22px;
+      color: #111;
+      line-height: 1;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #f1f1f1;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid #ddd;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-info {
+      flex: 1;
+    }
+
+    .header-info h1 {
+      font-size: 18px;
+      color: #111;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .header-info p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .chat-area {
+      padding: 16px 12px 24px;
+      min-height: calc(100vh - 68px);
+      background-color: #efeae2;
+      background-image:
+        radial-gradient(circle at 25px 25px, rgba(0,0,0,0.02) 2px, transparent 2px),
+        radial-gradient(circle at 75px 75px, rgba(0,0,0,0.02) 2px, transparent 2px);
+      background-size: 100px 100px;
+    }
+
+    .message-card {
+      width: 100%;
+      max-width: 318px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .ad-preview {
+      background: #e9edf1;
+      padding: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+
+
+    .message-body {
+      padding: 14px 14px 10px;
+    }
+
+    .message-body p {
+      font-size: 15px;
+      color: #222;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .auto-tag {
+      font-size: 13px;
+      color: #9b9b9b;
+      margin-bottom: 14px;
+    }
+
+    .form-area {
+      padding: 0 14px 14px;
+    }
+
+    .field {
+      margin-bottom: 10px;
+    }
+
+    .field input {
+      width: 100%;
+      height: 46px;
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      padding: 0 12px;
+      font-size: 15px;
+      outline: none;
+      background: #fff;
+    }
+
+    .field input:focus {
+      border-color: #25d366;
+    }
+
+    .cta {
+      width: 100%;
+      border: none;
+      height: 48px;
+      border-radius: 8px;
+      background: #25d366;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .cta:hover {
+      filter: brightness(0.96);
+    }
+
+    .cta:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .mini-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #7a7a7a;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFGWSJH8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="whatsapp-frame">
+    <div class="header">
+      <div class="back">←</div>
+
+      <div class="avatar">
+        <img src="C:\Users\Morro Alto\Desktop\whatsapp_bike_sport\logo.png" alt="Logo da loja" />
+      </div>
+
+      <div class="header-info">
+        <h1>Nossa Loja Bike</h1>
+        <p>Conta comercial</p>
+      </div>
+    </div>
+
+    <div class="chat-area">
+      <div class="message-card">
+
+
+        <div class="message-body">
+          <p>Olá! Preencha o formulário abaixo para iniciar seu atendimento no nosso setor de vendas.</p>
+          <div class="auto-tag">Mensagem de saudação automática</div>
+        </div>
+
+        <div class="form-area">
+          <div class="field">
+            <input type="text" id="nome" placeholder="Seu nome" />
+          </div>
+
+          <div class="field">
+            <input type="tel" id="telefone" placeholder="Seu telefone" />
+          </div>
+
+          <button class="cta" id="btnEnviar">Abrir o Whatsapp</button>
+
+          <div class="mini-note">
+            Ao continuar, você será direcionado para o WhatsApp da loja.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const NUMERO_WHATSAPP = "5527988635094";
+  const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbw70yddQmww0efgm7V7V8vkhiMpnUz9w_Gq2YZ3AtFmy8oTo4bGMp0j_yJvs3XTfeiu3w/exec";
+
+  const nomeInput = document.getElementById('nome');
+  const telefoneInput = document.getElementById('telefone');
+  const btnEnviar = document.getElementById('btnEnviar');
+
+  function getUTM() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      utm_source: p.get('utm_source') || '',
+      utm_medium: p.get('utm_medium') || '',
+      utm_campaign: p.get('utm_campaign') || '',
+      utm_term: p.get('utm_term') || '',
+      utm_content: p.get('utm_content') || '',
+      utm_adset: p.get('utm_adset') || '',
+      utm_placement: p.get('utm_placement') || ''
+    };
+  }
+
+  telefoneInput.addEventListener('input', function (e) {
+    let valor = e.target.value.replace(/\D/g, '').slice(0, 11);
+
+    let formatado = '';
+    if (valor.length > 0) formatado = '(' + valor.substring(0, 2);
+    if (valor.length >= 3) formatado += ') ' + valor.substring(2, 7);
+    if (valor.length >= 8) formatado += '-' + valor.substring(7, 11);
+
+    e.target.value = formatado;
+  });
+
+  btnEnviar.addEventListener('click', async function () {
+    const nome = nomeInput.value.trim();
+    const telefone = telefoneInput.value.trim();
+
+    if (!nome || !telefone) {
+      alert('Preencha nome e telefone.');
+      return;
+    }
+
+    const telefoneValido = /^\(\d{2}\)\s\d{5}-\d{4}$/.test(telefone);
+    if (!telefoneValido) {
+      alert('Telefone inválido. Use o formato (00) 00000-0000');
+      return;
+    }
+
+    btnEnviar.disabled = true;
+    btnEnviar.textContent = 'Enviando...';
+
+    const telefoneLimpo = telefone.replace(/\D/g, '');
+    const utm = getUTM();
+
+    const mensagem =
+`Olá! Acabei de preencher o formulário para iniciar meu atendimento no setor de vendas da loja.
+
+Nome: ${nome}
+WhatsApp: ${telefone}
+Anúncio: ${utm.utm_content || 'não informado'}`;
+
+    const dados = {
+      lp: 'LP WhatsApp Loja Bike',
+      nome: nome,
+      telefone: telefoneLimpo,
+      campanha: utm.utm_campaign || '',
+      origem: 'lp_whatsapp_loja_bike',
+      tipo_atendimento: 'Setor de vendas',
+      pagina: window.location.href,
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      utm_term: utm.utm_term,
+      utm_content: utm.utm_content,
+      utm_adset: utm.utm_adset,
+      utm_placement: utm.utm_placement
+    };
+
+    try {
+      await fetch(URL_SCRIPT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(dados)
+      });
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'lead_whatsapp',
+        nome: nome,
+        telefone: telefone,
+        telefone_normalizado: '55' + telefoneLimpo,
+        origem: 'lp_whatsapp_loja_bike',
+        tipo_atendimento: 'Setor de vendas',
+        link_whatsapp: 'https://wa.me/' + NUMERO_WHATSAPP,
+        pagina: window.location.href,
+        utm_campaign: utm.utm_campaign,
+        utm_adset: utm.utm_adset,
+        utm_content: utm.utm_content,
+        utm_source: utm.utm_source,
+        utm_medium: utm.utm_medium,
+        utm_term: utm.utm_term,
+        utm_placement: utm.utm_placement
+      });
+    } catch (err) {
+      console.error('Erro ao enviar dados:', err);
+    }
+
+    window.location.href = 'https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(mensagem);
+  });
+</script>
+</body>
+</html>
