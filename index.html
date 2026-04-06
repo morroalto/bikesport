@@ -205,6 +205,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+<script>
+  function getParam(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name) || '';
+  }
+
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[2]) : '';
+  }
+
+  function gerarFbc() {
+    const fbclid = getParam('fbclid');
+    if (!fbclid) return '';
+    const timestamp = Date.now();
+    return `fb.1.${timestamp}.${fbclid}`;
+  }
+</script>
+
+    
     <div class="chat-area">
       <div class="message-card">
 
@@ -319,24 +339,31 @@ Anúncio: ${utm.utm_content || 'não informado'}`;
         body: JSON.stringify(dados)
       });
 
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'lead_whatsapp',
-        nome: nome,
-        telefone: telefone,
-        telefone_normalizado: '55' + telefoneLimpo,
-        origem: 'lp_whatsapp_loja_bike',
-        tipo_atendimento: 'Setor de vendas',
-        link_whatsapp: 'https://wa.me/' + NUMERO_WHATSAPP,
-        pagina: window.location.href,
-        utm_campaign: utm.utm_campaign,
-        utm_adset: utm.utm_adset,
-        utm_content: utm.utm_content,
-        utm_source: utm.utm_source,
-        utm_medium: utm.utm_medium,
-        utm_term: utm.utm_term,
-        utm_placement: utm.utm_placement
-      });
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'lead_whatsapp',
+
+  nome: nome,
+  telefone: telefoneLimpo,
+  telefone_normalizado: '55' + telefoneLimpo,
+
+  origem: 'lp_whatsapp_loja_bike',
+  tipo_atendimento: 'Setor de vendas',
+  link_whatsapp: 'https://wa.me/' + NUMERO_WHATSAPP,
+  pagina: window.location.href,
+
+  fbclid: getParam('fbclid'),
+  fbp: getCookie('_fbp'),
+  fbc: getCookie('_fbc') || gerarFbc(),
+
+  utm_campaign: utm.utm_campaign,
+  utm_adset: utm.utm_adset,
+  utm_content: utm.utm_content,
+  utm_source: utm.utm_source,
+  utm_medium: utm.utm_medium,
+  utm_term: utm.utm_term,
+  utm_placement: utm.utm_placement
+});
     } catch (err) {
       console.error('Erro ao enviar dados:', err);
     }
