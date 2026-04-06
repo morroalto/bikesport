@@ -368,7 +368,13 @@ window.dataLayer.push({
       console.error('Erro ao enviar dados:', err);
     }
 
-    window.location.href = 'https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(mensagem);
+    window.open(
+  'https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(mensagem),
+  '_blank',
+  'noopener,noreferrer'
+);
+    btnEnviar.disabled = false;
+btnEnviar.textContent = 'Abrir o Whatsapp';
   });
 </script>
 </body>
